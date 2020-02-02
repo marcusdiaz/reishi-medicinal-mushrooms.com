@@ -4,6 +4,7 @@ import axios from 'axios';
 import PostList from './PostList';
 import posts from './Posts';
 import PostFull from './PostFull';
+import './blog.css';
 
 class Blog extends React.Component {
 
@@ -31,7 +32,7 @@ class Blog extends React.Component {
     if(this.props.location.state) {
         console.log(this.props.location.state.post);
         return(
-          <div>
+          <div role="main" class="container">
             {
             <PostFull post={this.props.location.state.post}/>
             }
@@ -39,12 +40,12 @@ class Blog extends React.Component {
         );
     } else {
       return( 
-        <div>
-          {
-            this.state && this.state.posts &&
-            <PostList posts={this.state.posts}></PostList>
-          }
-        </div>
+          <div>
+                {
+                  this.state && this.state.posts &&
+                  <PostList posts={this.state.posts}></PostList>
+                }
+          </div>
       );
     }
   

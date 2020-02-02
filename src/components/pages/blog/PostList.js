@@ -17,8 +17,8 @@ class PostList extends React.Component {
     }
     
     return( 
-      <div>
-          {listFunc}
+      <div role="main" class="container">
+      {listFunc}
       </div>
     );
   }
